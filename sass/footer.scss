@@ -1,0 +1,41 @@
+.footer {
+    min-height: 120px;
+    background: $white;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    z-index: 99;
+}
+.footer__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    min-height: 72px;
+    img {
+        filter: $grey-filter;
+    }
+    &:disabled {
+        pointer-events: none;
+        user-select: none;
+        img {
+            filter: $blue-uk-new-filter;
+        }
+        p {
+            color: $blue-uk-new;
+        }
+    }
+}
+.footer__button_inner {
+    font-size: 20px;
+    color: $grey;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-align: center;
+}

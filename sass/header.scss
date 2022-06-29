@@ -1,0 +1,21 @@
+.header {
+    min-height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 36px;
+}
+.header__title_inner {
+    font-size: 28px;
+    color: $white;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-align: center;
+}
+.header__action {
+    text-align: center;
+}
+.header__action_button_icon {
+    filter: $white-filter;
+}

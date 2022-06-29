@@ -1,0 +1,98 @@
+.authorization {
+    background: $blue-bg-gradient;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.authorization__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.authorization__main_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.authorization__main_logo_span {
+    margin-top: 27px;
+    font-size: 24px;
+    color: $white;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+.authorization__main_form {
+    margin-top: 179px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+.authorization__main_form_input {
+    @extend .authorization__main_logo_span;
+    min-height: 26px;
+    min-width: 502px;
+    outline: none;
+    padding: 0;
+    border: 2px solid $blue-uk;
+    background: none;
+    padding: 30px;
+    text-align: center;
+    margin-top: 30px;
+    border-radius: 50px;
+    &:disabled {
+        user-select: none;
+        pointer-events: none;
+    }
+    &::placeholder {
+        @extend .authorization__main_logo_span;
+        margin-top: 0;
+        text-align: center;
+        text-overflow: ellipsis;
+    }
+    &:focus {
+        &::placeholder {
+            visibility: hidden;
+        }
+    }
+}
+.authorization__main_form_submit {
+    @extend .authorization__main_form_input;
+    background: $neon-red;
+    border-color: $neon-red;
+    margin-top: 60px;
+    min-width: 566px;
+    &:disabled {
+        user-select: none;
+        pointer-events: none;
+        background: $neon-red-low;
+        border-color: transparent;
+        color: $white-low;
+    }
+}
+.authorization__main_action,
+.authorization__main_reset {
+    @extend .authorization__main_logo_span;
+    &:disabled {
+        user-select: none;
+        pointer-events: none;
+        color: $white-low;
+    }
+}
+.reset_input {
+    &:disabled {
+        user-select: none;
+        pointer-events: none;
+        color: $white-low;
+        &::placeholder {
+            color: $white-low;
+        }
+    }
+}

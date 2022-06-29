@@ -1,0 +1,40 @@
+.matches__body {
+    padding-bottom: 160px;
+}
+.matches__body_main_item_player {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    min-width: 250px;
+}
+.matches__body_main_item_player_2 {
+    display: flex;
+    justify-content: flex-end;
+}
+.matches__body_main_item_player_name {
+    font-size: 20px;
+    color: $grey;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-align: center;
+}
+.matches__body_main_item_score {
+    font-size: 34px;
+    text-align: center;
+    color: $blue-uk-new;
+    font-weight: 700;
+}
+.matches__body_main_item_score_drawn {
+    @extend .matches__body_main_item_score;
+    color: $neon-red;
+}
+.matches__body_main_item_time {
+    @extend .matches__body_main_item_player_name;
+}
+.matches__body_main_button {
+    min-width: 100%;
+}
+.matches__body_main_item_player_icon {
+    padding: 17px;
+    border-radius: 100px;
+}

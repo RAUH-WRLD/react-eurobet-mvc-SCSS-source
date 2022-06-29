@@ -1,0 +1,250 @@
+.highlights__body:not(.body) {
+    margin-top: 38px;
+    padding: 0 50px;
+    margin-bottom: 92px;
+}
+.highlights__body_info {
+    display: flex;
+    justify-content: space-between;
+}
+.highlights__body_info_player {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-width: 210px;
+    min-height: 162px;
+}
+.highlights__body_info_result {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 210px;
+    min-height: 162px;
+}
+.highlights__body_info_player_icon {
+    width: 93px;
+    height: 93px;
+    border-radius: 100px;
+}
+.highlights__body_info_player_name {
+    margin-top: 18px;
+    font-size: 24px;
+    color: $white;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+.highlights__body_info_result_status {
+    @extend .highlights__body_info_player_name;
+    margin-top: 0;
+}
+.highlights__body_info_result_round {
+    @extend .highlights__body_info_player_name;
+    margin-top: 0;
+    font-size: 20px;
+}
+.highlights__body_info_result_item {
+    @extend .highlights__body_info_player_name;
+    margin-top: 0;
+    font-weight: 700;
+    font-size: 64px;
+}
+.highlights {
+    position: relative;
+}
+.highlight_team_1 {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .moment__item_player {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+.highlight_team_2 {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    .moment__item_player {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+.moment {
+    margin-top: 191px;
+    margin-bottom: 191px;
+}
+.moment__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 59px;
+    margin-bottom: 52px;
+    &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: -117%;
+        background: $grey;
+        width: 9px;
+        height: 9px;
+        border-radius: 100px;
+    }
+    &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        bottom: 14%;
+        background: $white;
+        width: 9px;
+        height: 9px;
+        border-radius: 100px;
+        z-index: 1;
+    }
+}
+.moment__item_highlight {
+    position: relative;
+    background: $white;
+    width: 42px;
+    height: 42px;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 1px;
+        height: 112px;
+        bottom: 0;
+        background: $grey;
+        z-index: 0;
+    }
+    &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        background: $white;
+        width: 42px;
+        height: 42px;
+        border-radius: 100px;
+        z-index: 0;
+    }
+    .moment_not-single-card_red_card {
+        position: absolute;
+        top: 9px;
+        left: 11px;
+        z-index: 2;
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+}
+.moment__item_action_yellow_card {
+    width: 14px;
+    height: 18px;
+    background: $yellow;
+    z-index: 1;
+}
+.moment__item_action_red_card {
+    width: 14px;
+    height: 18px;
+    background: $red;
+    z-index: 1;
+}
+.moment__item_action_goal {
+    position: static !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+}
+.moment__item_action_goal_inner {
+    filter: $blue-uk-new-filter;
+}
+.moment__item_player {
+    position: relative;
+    padding: 18px;
+    background: $white;
+    border-radius: 8px;
+}
+.moment__item_player_1 {
+    &:before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        border: 12px solid transparent;
+        border-left: 12px solid $white;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 99%;
+    }
+}
+.moment__item_player_2 {
+    &:before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        border: 12px solid transparent;
+        border-right: 12px solid $white;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 99%;
+    }
+}
+.moment__item_player_inner {
+    font-size: 20px;
+    color: $grey;
+    font-weight: 600;
+    span {
+        color: $blue-uk-new;
+    }
+}
+.moment__item_last {
+    position: absolute;
+    top: 0;
+    background: $grey;
+    height: 115px;
+    width: 1px;
+    &:before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        background: $grey;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-40%);
+        width: 9px;
+        height: 9px;
+        border-radius: 100px;
+    }
+}
+.moment__item_halftime {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.moment__item_halftime_inner {
+    font-size: 20px;
+    color: $grey;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+.moment__no_inner {
+    font-size: 20px;
+    color: $grey;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-align: center;
+}
